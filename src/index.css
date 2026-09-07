@@ -1,5 +1,5 @@
 @import "tailwindcss";
 * { scrollbar-width: thin; }
-:root { color-scheme: light; --paper:#F7F6F3; --ink:#111111; --line:#EAEAEA; --muted:#6B7280; --accent:#C45A2A; }
+:root { color-scheme: light; --paper:#FDFCF8; --ink:#111111; --line:#EAEAEA; --muted:#6B7280; --accent:#C45A2A; }
 body { font-family: "Work Sans", system-ui, -apple-system, sans-serif; background: var(--paper); color: var(--ink); }
 ::selection { background: #111; color: #fff; }

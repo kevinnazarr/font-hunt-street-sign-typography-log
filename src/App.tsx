@@ -25,10 +25,10 @@ export default function App(){
   function handleUpdate(id:string,p:Partial<Entry>){ update(id,p); setEditing(null); setToast("Updated \u00b7 "+(p.nickname||"find")) }
   function handleDelete(){ if(!pendingDelete) return; remove(pendingDelete); setPendingDelete(null); setToast("Entry removed") }
   return (
-    <div className="min-h-screen bg-[#FDFCF8] text-[#1A1A1E] selection:bg-[#C45A2A]/20">
+    <div className="min-h-screen bg-[var(--paper)] text-[#1A1A1E] selection:bg-[#C45A2A]/20">
       <Header count={entries.length} />
       <Hero />
-      <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12">
+      <main className="mx-auto max-w-5xl px-6 pb-12">
         <div ref={formRef}><HuntForm count={entries.length} editing={editing} onAdd={handleAdd} onUpdate={handleUpdate} onCancel={()=>setEditing(null)} /></div>
         <FilterBar filter={filter} counts={counts} filteredCount={filtered.length} onChange={setFilter} />
         <section aria-live="polite" className="mt-5">

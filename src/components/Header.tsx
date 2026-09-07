@@ -1,6 +1,6 @@
 export function Header({ count }: { count: number }){
   return (
-    <header className="sticky top-0 z-30 bg-[#F7F6F3]/90 backdrop-blur border-b border-[#EAEAEA]">
+    <header className="sticky top-0 z-30 bg-[var(--paper)]/90 backdrop-blur border-b border-[var(--line)]">
       <div className="mx-auto max-w-5xl px-6 py-4 flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-3">
           <div className="h-9 w-9 rounded-xl bg-[#1A1A1E] text-[#FDFCF8] grid place-items-center font-bold text-[13px] tracking-[0.12em]">FH</div>

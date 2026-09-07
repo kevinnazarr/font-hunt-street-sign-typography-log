@@ -5,7 +5,7 @@ type Props = { entries: Entry[]; filtered: Entry[]; filter: Tag|"All"; total: nu
 export function EntryGrid({ entries, filtered, filter, total, onDelete, onEdit, onClear, focusFirst }: Props){
   if(entries.length===0){
     return (
-      <div className="rounded-2xl border-2 border-dashed border-[#EAE8E3] bg-white p-8 sm:p-10 text-center">
+      <div className="rounded-2xl border-2 border-dashed border-[var(--line)] bg-white p-8 sm:p-10 text-center">
         <div className="mx-auto h-12 w-12 rounded-2xl bg-[#F2F0EB] grid place-items-center text-xl">\u25CE</div>
         <h3 className="mt-3 text-[18px] font-bold tracking-[-0.02em]">Your field log is empty</h3>
         <p className="mt-1 text-[14px] text-[#6B6B74] max-w-[520px] mx-auto">Log your first street find above \u2014 a deli awning, a hand-painted truck, a neon ghost. Each card becomes a type specimen in its tagged font.</p>
@@ -15,7 +15,7 @@ export function EntryGrid({ entries, filtered, filter, total, onDelete, onEdit, 
   }
   if(filtered.length===0){
     return (
-      <div className="rounded-2xl border border-[#EAE8E3] bg-white p-8 text-center">
+      <div className="rounded-2xl border border-[var(--line)] bg-white p-8 text-center">
         <p className="text-[14px] font-semibold">No {filter} finds yet</p>
         <p className="text-[13px] text-[#6B6B74]">Try another tag or clear the filter to see all {total} entries.</p>
         <button onClick={onClear} className="mt-3 rounded-full border border-[#1A1A1E] px-4 py-1.5 text-[13px] font-medium hover:bg-[#1A1A1E] hover:text-white transition">Clear filter</button>
